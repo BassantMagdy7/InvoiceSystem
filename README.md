@@ -25,7 +25,6 @@ Controller → Service → Repository → Database
    Create it manually in the `WebAPI` folder:
 
 
-
 2. Apply EF Core migrations (code first)
 
 
@@ -43,6 +42,7 @@ App runs at `http://localhost:4200`
 
 ## Features
 
+- JWT authentication on all endpoints
 - Paginated invoice listing
 - Real-time updates via SignalR
 - Discount & tax calculation per invoice item
