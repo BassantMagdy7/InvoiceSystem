@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Presentation/">
+    <Project Path="WebAPI/WebAPI.csproj" />
+  </Folder>
+  <Project Path="Business/Business.csproj" />
+  <Project Path="DataAccess/DataAccess.csproj" />
+</Solution>

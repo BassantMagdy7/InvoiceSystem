@@ -1,0 +1,13 @@
+<div class="modal-backdrop" *ngIf="isOpen">
+  <div class="confirm-modal">
+    <h3>Delete invoice?</h3>
+    <p>This action cannot be undone.</p>
+
+    <div class="modal-actions">
+      <button type="button" class="secondary-btn" (click)="cancel.emit()" [disabled]="isDeleting">Cancel</button>
+      <button type="button" class="delete-btn" (click)="confirm.emit()" [disabled]="isDeleting">
+        {{ isDeleting ? 'Deleting...' : 'Delete' }}
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+.invoice-list {
+  max-width: 1120px;
+  margin: 0 auto 24px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+  padding: 26px;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  gap: 16px;
+}
+
+.invoice-list h2 {
+  margin: 0;
+}
+
+input {
+  width: 100%;
+  max-width: 280px;
+  min-height: 42px;
+  border: 1px solid #cfd6e4;
+  border-radius: 8px;
+  padding: 9px 11px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.loading-message {
+  color: #667085;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 13px;
+  text-align: left;
+}
+
+th {
+  background: #eef2f7;
+}
+
+button {
+  min-height: 38px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0 14px;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.edit-btn {
+  background: #0ea5e9;
+  margin-right: 8px;
+}
+
+.delete-btn {
+  background: #dc2626;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.pagination span {
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .list-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,117 @@
+.invoice-form {
+  max-width: 1120px;
+  margin: 0 auto 24px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+  padding: 26px;
+}
+
+.invoice-form h2 {
+  margin: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid #cfd6e4;
+  border-radius: 8px;
+  padding: 9px 11px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.items-header,
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  gap: 16px;
+}
+
+.items-table {
+  margin-top: 12px;
+  border: 1px solid #d9dee8;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.items-row {
+  min-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 60px;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.items-row:first-child {
+  border-top: none;
+}
+
+.table-head {
+  background: #eef2f7;
+  font-weight: 700;
+}
+
+button {
+  min-height: 38px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0 14px;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  background: #64748b;
+}
+
+.danger-btn {
+  background: #dc2626;
+}
+
+@media (max-width: 760px) {
+  .items-header,
+  .form-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

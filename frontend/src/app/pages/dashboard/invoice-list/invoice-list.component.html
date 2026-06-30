@@ -1,0 +1,49 @@
+<section class="invoice-list">
+  <div class="list-header">
+    <h2>Invoice List</h2>
+    <input type="text" placeholder="Search" [(ngModel)]="searchText">
+  </div>
+
+  <p class="loading-message" *ngIf="isLoadingInvoices">Loading invoices...</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Invoice Serial</th>
+        <th>Invoice Date</th>
+        <th>Customer Name</th>
+        <th>Store Name</th>
+        <th>Total Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let invoice of filteredInvoices">
+        <td>{{ invoice.serial }}</td>
+        <td>{{ formatInvoiceDate(invoice.invoiceDate) }}</td>
+        <td>{{ invoice.customerName }}</td>
+        <td>{{ invoice.storeName }}</td>
+        <td>{{ invoice.totalPrice | number:'1.2-2' }}</td>
+        <td>
+          <button type="button" class="edit-btn" (click)="edit.emit(invoice.id)">Edit</button>
+          <button type="button" class="delete-btn" (click)="delete.emit(invoice.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="pagination-container">
+  <div class="pagination">
+    <button type="button" (click)="previousPage.emit()" [disabled]="pageNumber === 1 || isLoadingInvoices">
+      Previous
+    </button>
+
+    <span>Page {{ pageNumber }} of {{ totalPages }}</span>
+
+    <button type="button" (click)="nextPage.emit()" [disabled]="pageNumber === totalPages || isLoadingInvoices">
+      Next
+    </button>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="dashboard-page">
+  <header class="topbar">
+    <div>
+      <h1>Invoice Page</h1>
+      <p>Create, edit and manage invoices</p>
+    </div>
+
+    <button class="logout-btn" type="button" (click)="logout()">Logout</button>
+  </header>
+
+  <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+  <app-invoice-form
+    [invoice]="invoice"
+    [stores]="stores"
+    [customers]="customers"
+    [products]="products"
+    [editingInvoiceId]="editingInvoiceId"
+    [isSaving]="isSaving"
+    (save)="saveInvoice()"
+    (clear)="resetForm()">
+  </app-invoice-form>
+
+  <app-invoice-list
+    [invoices]="invoices"
+    [pageNumber]="pageNumber"
+    [totalPages]="totalPages"
+    [isLoadingInvoices]="isLoadingInvoices"
+    (edit)="editInvoice($event)"
+    (delete)="openDeleteConfirm($event)"
+    (previousPage)="previousPage()"
+    (nextPage)="nextPage()">
+  </app-invoice-list>
+
+  <app-delete-confirm-modal
+    [isOpen]="invoiceIdToDelete !== null"
+    [isDeleting]="isDeleting"
+    (cancel)="cancelDelete()"
+    (confirm)="confirmDelete()">
+  </app-delete-confirm-modal>
+</div>
+
+
+
+

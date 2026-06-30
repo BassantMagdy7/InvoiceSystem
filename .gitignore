@@ -1,0 +1,21 @@
+### Backend (.NET) ###
+bin/
+obj/
+*.user
+*.suo
+.vs/
+TestResults/
+*.pdb
+appsettings.Development.json
+
+### Frontend (Angular) ###
+node_modules/
+dist/
+.angular/
+*.log
+npm-debug.log*
+
+### Common / Tooling ###
+.vscode/
+.DS_Store
+Thumbs.db
